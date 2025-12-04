@@ -6,36 +6,37 @@
   <title>Entreprises Sans Site — Maroc</title>
   <meta name="description" content="Annuaire d'entreprises marocaines sans site web — recherche par ville et catégorie." />
 
-  <!-- AdSense (placer ton ID éditeur) -->
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXX"
-          crossorigin="anonymous"></script>
+  <!-- AdSense : remplace data-ad-slot par ton slot -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5598684072787687"
+     crossorigin="anonymous"></script>
 
-  <!-- CMP (exemple CookieYes) : remplace par le script que tu choisis -->
+  <!-- CMP : si tu utilises un CMP (ex: CookieYes), colle son script ici -->
   <!-- <script id="cookieyes" src="https://cdn-cookieyes.com/client_data/YOUR_ID/script.js"></script> -->
 
-  <link rel="stylesheet" href="./styles.css" />
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
   <header class="site-header">
-    <h1>Entreprises Sans Site — Maroc</h1>
-    <p class="tagline">Annuaire local — contactez directement les commerces qui n'ont pas (encore) de site web</p>
-    <div class="controls">
-      <input id="search" placeholder="Rechercher nom, métier, ville..." />
-      <select id="filter-city"><option value="">Toutes les villes</option></select>
-      <select id="filter-category"><option value="">Toutes les catégories</option></select>
+    <div class="wrap">
+      <h1>Entreprises Sans Site — Maroc</h1>
+      <p class="tagline">Annuaire local — contactez directement des commerces sans site web</p>
+      <div class="controls">
+        <input id="search" placeholder="Rechercher nom, métier, ville..." />
+        <select id="filter-city"><option value="">Toutes les villes</option></select>
+        <select id="filter-category"><option value="">Toutes les catégories</option></select>
+      </div>
     </div>
   </header>
 
   <main id="main">
-    <section id="list-section" class="container">
+    <section id="list-section" class="container wrap">
       <h2>Dernières fiches</h2>
       <ul id="companies-list" class="list"></ul>
 
-      <!-- emplacement pub (sidebar / mobile) -->
       <div class="ad-block">
         <ins class="adsbygoogle"
              style="display:block"
-             data-ad-client="ca-pub-XXXXXXXXXXXX"
+             data-ad-client="ca-pub-5598684072787687"
              data-ad-slot="1234567890"
              data-ad-format="auto"
              data-full-width-responsive="true"></ins>
@@ -43,15 +44,14 @@
       </div>
     </section>
 
-    <section id="company-section" class="container hidden">
-      <a id="back-link" href="#">← Retour aux fiches</a>
+    <section id="company-section" class="container wrap hidden">
+      <a id="back-link" href="#" class="back">← Retour aux fiches</a>
       <article id="company-detail"></article>
 
-      <!-- pub intégrée dans la fiche -->
       <div class="ad-block">
         <ins class="adsbygoogle"
              style="display:block"
-             data-ad-client="ca-pub-XXXXXXXXXXXX"
+             data-ad-client="ca-pub-5598684072787687"
              data-ad-slot="9876543210"
              data-ad-format="auto"
              data-full-width-responsive="true"></ins>
@@ -61,12 +61,14 @@
   </main>
 
   <footer class="site-footer">
-    <nav>
-      <a href="./privacy.html">Politique de confidentialité</a> — <a href="#">Contact</a>
-    </nav>
-    <small>© <span id="year"></span> — Entreprises Sans Site — Maroc</small>
+    <div class="wrap">
+      <nav>
+        <a href="privacy.html">Politique de confidentialité</a> — <a href="#">Contact</a>
+      </nav>
+      <small>© <span id="year"></span> — Entreprises Sans Site — Maroc</small>
+    </div>
   </footer>
 
-  <script src="./script.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>

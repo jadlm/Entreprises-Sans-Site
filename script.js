@@ -15,11 +15,16 @@ const EL = {
   let companies = [];
   
   async function loadData(){
-    const res = await fetch('./companies.json');
-    companies = await res.json();
-    initFilters();
-    renderList(companies);
-    handleHashChange();
+    try {
+      const res = await fetch('./companies.json');
+      companies = await res.json();
+      initFilters();
+      renderList(companies);
+      handleHashChange();
+    } catch (err) {
+      console.error(err);
+      EL.list.innerHTML = '<li>Erreur de chargement des données</li>';
+    }
   }
   
   function initFilters(){
@@ -58,7 +63,7 @@ const EL = {
     return `<li>
       <a href="#company=${encodeURIComponent(c.slug)}">${escapeHtml(c.name)}</a>
       <div class="muted">${escapeHtml(c.city)} — ${escapeHtml(c.category)}</div>
-      <p>${escapeHtml(shorten(c.description,200))}</p>
+      <p>${escapeHtml(shorten(c.description,220))}</p>
     </li>`;
   }
   
@@ -97,8 +102,5 @@ const EL = {
   function shorten(s,n){ return s.length>n? s.slice(0,n-1)+'…': s; }
   function capitalize(s){ return s.charAt(0).toUpperCase()+s.slice(1); }
   
-  loadData().catch(err => {
-    EL.list.innerHTML = '<li>Erreur de chargement des données</li>';
-    console.error(err);
-  });
+  loadData();
   
