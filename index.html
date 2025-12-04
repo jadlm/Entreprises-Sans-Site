@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Entreprises Sans Site — Maroc</title>
+  <meta name="description" content="Annuaire d'entreprises marocaines sans site web — recherche par ville et catégorie." />
+
+  <!-- AdSense (placer ton ID éditeur) -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXX"
+          crossorigin="anonymous"></script>
+
+  <!-- CMP (exemple CookieYes) : remplace par le script que tu choisis -->
+  <!-- <script id="cookieyes" src="https://cdn-cookieyes.com/client_data/YOUR_ID/script.js"></script> -->
+
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <h1>Entreprises Sans Site — Maroc</h1>
+    <p class="tagline">Annuaire local — contactez directement les commerces qui n'ont pas (encore) de site web</p>
+    <div class="controls">
+      <input id="search" placeholder="Rechercher nom, métier, ville..." />
+      <select id="filter-city"><option value="">Toutes les villes</option></select>
+      <select id="filter-category"><option value="">Toutes les catégories</option></select>
+    </div>
+  </header>
+
+  <main id="main">
+    <section id="list-section" class="container">
+      <h2>Dernières fiches</h2>
+      <ul id="companies-list" class="list"></ul>
+
+      <!-- emplacement pub (sidebar / mobile) -->
+      <div class="ad-block">
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-XXXXXXXXXXXX"
+             data-ad-slot="1234567890"
+             data-ad-format="auto"
+             data-full-width-responsive="true"></ins>
+        <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+      </div>
+    </section>
+
+    <section id="company-section" class="container hidden">
+      <a id="back-link" href="#">← Retour aux fiches</a>
+      <article id="company-detail"></article>
+
+      <!-- pub intégrée dans la fiche -->
+      <div class="ad-block">
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-XXXXXXXXXXXX"
+             data-ad-slot="9876543210"
+             data-ad-format="auto"
+             data-full-width-responsive="true"></ins>
+        <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <nav>
+      <a href="./privacy.html">Politique de confidentialité</a> — <a href="#">Contact</a>
+    </nav>
+    <small>© <span id="year"></span> — Entreprises Sans Site — Maroc</small>
+  </footer>
+
+  <script src="./script.js"></script>
+</body>
+</html>

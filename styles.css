@@ -1,0 +1,19 @@
+:root{--bg:#f7f8fb;--card:#fff;--muted:#666;--accent:#0b76ef}
+*{box-sizing:border-box}
+body{font-family:system-ui,-apple-system,Segoe UI,Roboto,"Helvetica Neue",Arial;margin:0;background:var(--bg);color:#111}
+.site-header{padding:18px;text-align:center;background:linear-gradient(90deg,#fff,#f3f6ff);border-bottom:1px solid #e6e9f2}
+.site-header h1{margin:.2rem 0;font-size:1.4rem}
+.controls{display:flex;gap:.5rem;justify-content:center;margin-top:.8rem;flex-wrap:wrap}
+.controls input, .controls select{padding:.5rem;border:1px solid #d6dbe9;border-radius:6px}
+.container{max-width:960px;margin:24px auto;padding:0 12px}
+.list{list-style:none;padding:0;margin:0;display:grid;gap:10px}
+.list li{background:var(--card);padding:12px;border-radius:8px;border:1px solid #eef2fb}
+.list li a{color:var(--accent);font-weight:600;text-decoration:none}
+.ad-block{margin:16px 0;padding:8px;text-align:center}
+.hidden{display:none}
+#company-detail h1{margin-top:0}
+.site-footer{padding:14px;text-align:center;font-size:.9rem;color:var(--muted);border-top:1px solid #e6e9f2;background:#fff;margin-top:40px}
+@media(min-width:900px){
+  .controls{justify-content:flex-end;padding-right:24px}
+  .site-header{text-align:left;padding-left:24px}
+}
